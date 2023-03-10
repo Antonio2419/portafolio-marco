@@ -1,0 +1,526 @@
+*{
+box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Raleway', sans-serif;
+
+}
+.wrapper {
+    background-color: #1e2326;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.wrapper header{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 15px 20px;
+}
+.wrapper header h2 {
+    
+    font-size: 36px;
+    color: #1cb698;
+    text-decoration: none;
+}
+.wrapper header ul{
+    display: flex;
+    list-style: none;
+}
+.wrapper header nav ul li a{
+    text-align: none;
+    color: #fff;
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+}
+.wrapper header nav ul li a:hover{
+    color: #1cb698;
+}
+.nav-responsive{
+    background-color: #1cb696;
+    color: aliceblue;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+.inicio{
+    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,35,1)), url(../img/fondo.png);
+    background-size: cover;
+    height: 100vh;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+
+}
+.inicio .info__contenido{
+    padding: 20px;
+    background-color: #1e2326;
+    border: 4px double rgb(12, 12, 12);
+    max-width: 350px;
+    margin: auto;
+    text-align: center;
+    border-radius: 50px;
+}
+.inicio .info__contenido img{
+    margin-top: 40px;
+    border: 10px solid #1cb696;
+    display: block;
+    width: 80%;
+    margin: auto;
+    border-radius: 100%;
+}
+.inicio .info__contenido h1{
+    margin-top: 40px;
+    font-size: 32px;
+}   
+.inicio .info__contenido h2{
+    font-size: 15px;
+    font-weight: normal;  
+}
+.inicio .info__contenido h1:hover{
+    color: #1cb696;
+}
+.inicio .info__contenido .redes a{
+    color: aliceblue;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid aliceblue;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 8px;
+    font-size: 20px;
+    transition: .3s;
+}
+.inicio .info__contenido .redes a:hover{
+    background-color: #1cb696;
+}
+.about{
+    background-color: #1e2326;
+    color: aliceblue;
+    padding: 50px 20px;
+}
+.about__info{
+    max-width: 1100px;
+    margin: auto;
+    color: aliceblue;
+    padding: 20px 20px;
+}
+.about h2{
+    font-size: 48px;
+    text-align: center;
+    padding: 20px 0;
+}
+.about h2:hover{
+    color: #1cb696;
+}
+.about .about__info p{
+    font: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;
+   
+
+}
+.hobbies .hobbies__line{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.hobbies__title{
+    font-size: 48px;
+    text-align: center;
+    padding: 20px 0;
+    color: aliceblue;
+}
+.hobbies__title:hover{
+    color: #1cb696;
+}
+.hobbies__box{
+    width: 100px;
+    height: 100px;
+    background-color: #252a2e;
+    border-radius: 10px;
+    margin: 0 15px 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+.hobbies__box:hover{
+    background-color:#1cb696; 
+}
+.hobbies a{
+   font-size: 25px;
+   margin-left: 10px;
+   margin-bottom: 20px;
+   color: #EAF2FD; 
+}
+.hobbies__name{
+    display:flex;
+    list-style: none;
+    color: #464646;
+}
+ button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid aliceblue;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: aliceblue;
+    position: relative;
+    z-index: 10;
+}
+button .btn__Icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #1cb696;
+    z-index: -1;
+    transition: 1s;
+}
+button:hover .btn__Icon{
+    width: 100%;
+}
+
+.skills{
+    display: grid;
+    background: #252a2e;
+    padding:0 0 20px 0;
+    
+}
+.skills__title{
+    font-size: 48px;
+    text-align: center;
+    padding: 20px 0;
+    color: aliceblue;
+} 
+.skills__title:hover{
+    color: #1cb696;
+}
+.skills__line{
+        display: flex;
+        justify-content: space-evenly;
+
+}
+.skills__box{
+    width: 120px;
+    height: 120px;
+    background-color: #252a2e;
+    border-radius: 10px;
+     margin: 0 15px 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+.skills__box:hover{
+    background-color:#1cb696;
+}
+.skills i{
+   font-size: 30px;
+   margin-bottom: 10px;
+   color: #EAF2FD;
+   
+}
+.skills__name{
+    display:flex;
+    list-style: none;
+    color: aliceblue;
+}
+.skills img{
+    height: 30px;
+    width: 30px;
+    background-color: aliceblue;
+    border-radius: 5px;
+    
+   
+}
+
+.academic{
+    background-color: #1e2326;
+    color: aliceblue;
+    padding: 50px 20px;
+}
+.academic .academic__courses{
+    max-width: 1100px;
+    margin: auto;
+}
+
+.academic h2{
+    font-size: 48px;
+    text-align: center;
+    padding: 20px 0;
+}
+.academic h2:hover{
+    color: #1cb696;
+}
+.academic .academic__courses{
+    display: flex;
+}
+.academic .academic__courses .academic__courses__box{
+    width: 49%;
+    padding: 0 20px;
+}
+.academic .academic__courses .academic__courses__box h4{
+    font-size: 16px;
+    margin-left: 25px;
+    color: #1cb696;
+}
+
+.academic__courses {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.academic ul{
+     font-size: 12px;
+    list-style: none;
+    text-align: center;
+    border-left: 2px solid #252a2e;
+     
+}
+.academic li{
+    padding: 25px;
+    margin-bottom: 30px;
+    background-color: #252a2e;
+    position: relative;
+}
+.academic  .derecha{
+    border-right: 3px solid #1cb696;
+    margin-right: 20px;
+}
+.academic  .centro{
+    border-right: 3px solid #1cb696;
+    margin-right: 20px;
+    border-left: 3px solid #1cb696;
+    margin-left: 20px;
+
+}
+.academic  .izquierda{
+    border-left: 3px solid #1cb696;
+    margin-left: 20px;
+}
+.academic img{
+    width: 100px;
+    height: 100px;
+    justify-content: end;
+    align-items: start;
+    border-radius: 30px;
+}
+.experience{
+    background: linear-gradient(to top, rgba(107, 108, 109, 0.363), rgb(56, 58, 58)), url(../img/PROYECTO.jpg);
+ 
+}
+.experience-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.experience__section__title{
+    font-size: 48px;
+    text-align: center;
+    padding: 20px 0;
+}
+.experience__section__title:hover{
+    color: #1cb696;
+}
+.experience-seccion{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+.experience__box{
+    position: relative;
+    max-width: 440px;
+    height: fit-content;
+    margin: 10px;
+    cursor: pointer;
+}
+.experience__img{
+    width: 24em;
+    height: 20em;
+    display: block;
+    
+}
+.experience__description{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: linear-gradient(rgba(28,182,152,.8), rgba(28,182,152,.8));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 1s;
+    font-size: 18px;
+    letter-spacing: 6px;
+    opacity: 0;
+}
+.experience__description h3{
+    margin-bottom: 20px;
+    transition: 1s;
+}
+.experience__description:hover{
+    opacity: 1;
+}
+.experience__description:hover h3{
+    margin-bottom: 0px;
+}
+.formcontato{
+    background: linear-gradient(to top, rgba(37, 38, 39, 0.432), rgb(56, 58, 58)), url(../img/comunicacion.jpg);
+    color: aliceblue;
+
+}
+.formcontato h2{
+    font-size: 48px;
+    text-align: center;
+    padding: 20px 0;
+}
+.formcontato h2:hover{
+    color: #1cb696;
+}
+
+.formcontato__contacto{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.formcontato__text{
+    width: 350px;
+    height: 450px;
+    text-align: center;
+    margin-bottom: 1.5em;
+    background: #1e2326;
+    border: 5px  currentColor rgb(250, 247, 247);
+    border-radius: 20px;
+    color: aliceblue;
+} 
+.formcontato__title{   
+    font-size: 32px;
+}
+.formcontato__subtext{
+    font-size: 16px;
+    padding: 0px 20px 10px;
+}
+.formcontato__input, .formcontato__textarea{
+    padding: 10px 20px;
+    margin-bottom: 1em;
+    background: none;
+    border: none;
+    border-bottom: 1px solid aqua;
+}
+
+footer{
+    background-color: #252A2E;
+    color: #fff;
+    padding: 50px 0 30px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+footer .redes{
+    margin-bottom: 20px;
+}
+footer .redes a{
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+footer .arriba{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #1CB698;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 18px;
+}
+@media screen and (max-width:980px){
+    nav{
+        display: none;
+        margin: auto;
+    }
+    .nav-responsive{
+        display: block;
+    }
+    nav.responsive{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background-color: #252A2E;
+        width: 180px;
+    }
+    nav.responsive ul{
+        display: block !important;
+    }
+    nav.responsive ul li{
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
+    }
+}
+
+@media screen and (max-width:700px){
+    .about .about__info{
+        display: block;
+    }
+    .about .about__info .hobbies__line{
+        width: 100%;
+    }
+    
+
+    .skills .skills__line{
+        display: block;
+    }
+    .skills .skills__line .skills__box{
+        margin: auto;
+        width: 50%;
+       
+    }
+    
+    .academic .academic__courses{
+        display: block;
+    }
+    .academic .academic__courses .academic__courses__box{
+        width: 100%;
+       justify-content: center;
+       padding: 30px;
+    }
+  
+}
