@@ -135,7 +135,8 @@ body{
 }
 .hobbie, .hobbies__line{
     display: grid;
-   grid-template-columns: repeat(auto-fit,minmax(150px, 2fr));
+    grid-template-columns: repeat(auto-fit,minmax(150px, 2fr));
+    gap:20px;
     
 }
 .hobbies__title{
@@ -218,16 +219,19 @@ button:hover .btn__Icon{
     color: #1cb696;
 }
 .skills__line{
-        display: flex;
-        justify-content: space-evenly;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 8fr));
+        flex-direction: column;
+        gap: 30px;
 
 }
 .skills__box{
-    width: 220px;
-    height: 220px;
+    width: 150px;
+    height: 150px;
     background-color: #252a2e;
+    font-size: 28px;
     border-radius: 10px;
-    margin: 0 15px 15px 0;
+    margin: 0 25px 25px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -254,8 +258,6 @@ button:hover .btn__Icon{
     margin-bottom: 15px;
     background-color: aliceblue;
     border-radius: 5px;
-    
-   
 }
 
 .academic{
@@ -422,6 +424,7 @@ button:hover .btn__Icon{
 } 
 .formulario-text{
     padding: 10px;
+    font-size: 26px;
 }
 
 .formulario__label {
@@ -433,8 +436,6 @@ button:hover .btn__Icon{
     position: relative;
     
 }
-
-
 .formulario__input {
     width: 70%;
     background: transparent;
@@ -533,8 +534,6 @@ button:hover .btn__Icon{
     display: block;
 }
 
-
-
 .formulario__grupo-correcto .formulario__validacion-estado{
     color: aqua;
     opacity: 1;
@@ -543,19 +542,14 @@ button:hover .btn__Icon{
 .formulario__grupo-incorrecto .formulario__label{
     color: #ee0f0f;
 }
-
-
 .formulario__grupo-incorrecto .formulario__validacion-estado{
     color: #ee0f0f;
     opacity: 1;
 }
 
 .formulario__grupo-incorrecto .formulario__input{
-    border: 1px solid #ee0f0f;
-    
+    border: 1px solid #ee0f0f;   
 }
-
-
 footer{
     background-color: #252A2E;
     color: #fff;
@@ -618,6 +612,7 @@ footer .arriba{
         border-bottom: 1px solid #fff;
         padding: 10px 0;
     }
+
 }
 
 @media screen and (max-width:700px){
