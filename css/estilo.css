@@ -129,32 +129,31 @@ body{
     color: #1cb696;
 }
 .about .about__info p{
-    font: 18px;
+    font-size: 18px;
     line-height: 22px;
     margin-bottom: 20px;
-   
-
 }
-.hobbies .hobbies__line{
-    display: flex;
-    justify-content: space-around;
+.hobbie, .hobbies__line{
+    display: grid;
+   grid-template-columns: repeat(auto-fit,minmax(150px, 2fr));
     
 }
 .hobbies__title{
     font-size: 48px;
     text-align: center;
-    padding: 20px 0;
+    padding: 30px 0;
     color: aliceblue;
 }
 .hobbies__title:hover{
     color: #1cb696;
 }
 .hobbies__box{
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
+    font-size: 28px;
     background-color: #252a2e;
-    border-radius: 10px;
-    margin: 0 15px 15px 0;
+    border-radius: 25px;
+    margin: 0 25px 25px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -164,12 +163,13 @@ body{
 .hobbies__box:hover{
     background-color:#1cb696; 
 }
-.hobbies a{
-   font-size: 25px;
+
+.hobbies i {
    margin-left: 10px;
    margin-bottom: 20px;
-   color: #EAF2FD; 
+   
 }
+
 .hobbies__name{
     display:flex;
     list-style: none;
@@ -205,7 +205,7 @@ button:hover .btn__Icon{
 .skills{
     display: grid;
     background: #252a2e;
-    padding:0 0 20px 0;
+    padding:0 0 30px 0;
     
 }
 .skills__title{
@@ -223,11 +223,11 @@ button:hover .btn__Icon{
 
 }
 .skills__box{
-    width: 120px;
-    height: 120px;
+    width: 220px;
+    height: 220px;
     background-color: #252a2e;
     border-radius: 10px;
-     margin: 0 15px 15px 0;
+    margin: 0 15px 15px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -238,19 +238,20 @@ button:hover .btn__Icon{
     background-color:#1cb696;
 }
 .skills i{
-   font-size: 30px;
-   margin-bottom: 10px;
+   font-size: 80px;
+   margin-bottom: 20px;
    color: #EAF2FD;
-   
 }
 .skills__name{
+    font-size: 20px;
     display:flex;
     list-style: none;
     color: aliceblue;
 }
 .skills img{
-    height: 30px;
-    width: 30px;
+    height: 80px;
+    width: 80px;
+    margin-bottom: 15px;
     background-color: aliceblue;
     border-radius: 5px;
     
@@ -341,6 +342,7 @@ button:hover .btn__Icon{
     font-size: 48px;
     text-align: center;
     padding: 20px 0;
+    color: aliceblue;
 }
 .experience__section__title:hover{
     color: #1cb696;
@@ -392,7 +394,7 @@ button:hover .btn__Icon{
 .formcontato{
     background: linear-gradient(to top, rgba(37, 38, 39, 0.432), rgb(56, 58, 58)), url(../img/comunicacion.jpg);
     color: aliceblue;
-
+    
 }
 .formcontato h2{
     font-size: 48px;
@@ -403,35 +405,156 @@ button:hover .btn__Icon{
     color: #1cb696;
 }
 
-.formcontato__contacto{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+.formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.formcontato__text{
-    width: 350px;
-    height: 450px;
+.formulario-area{
+    width: 400px;
+    height: 500px;
     text-align: center;
     margin-bottom: 1.5em;
-    background: #1e2326;
-    border: 5px  currentColor rgb(250, 247, 247);
+    background: #101313;
+    border: 5px  currentColor rgb(194, 29, 29);
     border-radius: 20px;
     color: aliceblue;
 } 
-.formcontato__title{   
-    font-size: 32px;
+.formulario-text{
+    padding: 10px;
 }
-.formcontato__subtext{
+
+.formulario__label {
+    display: block;
+    padding: 10px 0;
+}
+
+.formulario__grupo-input {
+    position: relative;
+    
+}
+
+
+.formulario__input {
+    width: 70%;
+    background: transparent;
+    border-bottom: 2px solid aqua;
+    border-right: none;
+    color: #fff;
     font-size: 16px;
-    padding: 0px 20px 10px;
+    outline: none;
+    line-height: 45px;
+    padding: 0 10px;
+    transition: all 1s;
 }
-.formcontato__input, .formcontato__textarea{
-    padding: 10px 20px;
-    margin-bottom: 1em;
-    background: none;
+
+.formulario__validacion-estado {
+    position: absolute;
+    right: 65px;
+    bottom: 15px;
+    z-index: 1000;
+    font-size: 16px;
+    opacity: 0;
+}
+
+.formulario__input:focus {
+    box-shadow: 0 0 5px aqua;
+}
+
+.formulario__input-error {
+    font-size: 12px;
+    margin-bottom: 0;
+    display: none;
+}
+
+.formulario__input-error-activo {
+    display: block;
+}
+
+.formulario__span {
+    font-size: 1em;
+    font-weight: 100;
+}
+
+
+.formulario__grupo-terminos {
+    text-align: center;
+}
+
+.formulario__grupo-terminos, .formulario__mensaje, .formulario__grupo-btn-enviar {
+    grid-column: span 1;
+}
+
+.formulario__mensaje {
+    display: none;
+    height: 5px; 
+    line-height: 5px; 
+    padding: 10px;
+    border-radius: 5px;
+    background: rgb(255, 57, 57);
+    text-align: center;
+    font-size: 10px;
+    margin-bottom: 1.25em;
+}
+
+.formulario__mensaje-activo {
+    display: block;
+}
+
+.formulario__grupo-btn-enviar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario__btn {
+    padding: 15px 35px;
+    background: aqua;
+    color: #fff;
     border: none;
-    border-bottom: 1px solid aqua;
+    border-radius: 3px;
+    cursor: pointer;
 }
+
+.formulario__btn:hover {
+    background: rgb(4, 91, 204);
+    transition: 1s;
+}
+
+.formulario__mensaje-exito {
+    font-size: 2em;
+    color: aqua;
+    padding: 10px;
+    text-align: center;
+    display: none;
+}
+
+.formulario__mensaje-exito-activo { 
+    display: block;
+}
+
+
+
+.formulario__grupo-correcto .formulario__validacion-estado{
+    color: aqua;
+    opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__label{
+    color: #ee0f0f;
+}
+
+
+.formulario__grupo-incorrecto .formulario__validacion-estado{
+    color: #ee0f0f;
+    opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input{
+    border: 1px solid #ee0f0f;
+    
+}
+
 
 footer{
     background-color: #252A2E;
@@ -478,12 +601,13 @@ footer .arriba{
     }
     .nav-responsive{
         display: block;
+        width: 10%;
     }
     nav.responsive{
         display: block;
         position: absolute;
         right: 0;
-        top: 75px;
+        top: 65px;
         background-color: #252A2E;
         width: 180px;
     }
@@ -502,25 +626,32 @@ footer .arriba{
     }
     .about .about__info .hobbies__line{
         width: 100%;
+        font-size: 16px;
     }
     
-
+     .skills__title {
+        margin: 40px;
+        
+     }
     .skills .skills__line{
         display: block;
+       
+        
     }
     .skills .skills__line .skills__box{
-        margin: auto;
-        width: 50%;
+       margin: auto;
+       margin-bottom: 7px;
+       width: 70%;
+       height: 20%;
        
-    }
-    
+    } 
     .academic .academic__courses{
         display: block;
     }
     .academic .academic__courses .academic__courses__box{
         width: 100%;
        justify-content: center;
-       padding: 30px;
+       padding: 40px;
     }
   
 }
