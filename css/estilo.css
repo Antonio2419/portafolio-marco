@@ -619,25 +619,30 @@ footer .arriba{
     .about .about__info{
         display: block;
     }
-    .about .about__info .hobbies__line{
-        width: 100%;
+    .about .about__info {
+        width: 80%;
         font-size: 16px;
+    }.hobbies__box{
+        width: 100%;
+       
     }
     
-     .skills__title {
-        margin: 40px;
+    .skills__title {
+        margin: 20px;
         
      }
-    .skills .skills__line{
-        display: block;
-       
+    .skills__line{
+        display: grid;
+        width: 80%;
+        margin-bottom: 60px;
         
     }
-    .skills .skills__line .skills__box{
+    .skills{
        margin: auto;
        margin-bottom: 7px;
-       width: 70%;
-       height: 20%;
+       width: 100%;
+       justify-content: center;
+       
        
     } 
     .academic .academic__courses{
